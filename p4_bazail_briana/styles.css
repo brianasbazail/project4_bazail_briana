@@ -1,0 +1,316 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header, main, nav, section, summary {
+  display: block;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  text-align: center;
+  padding: 3%;
+  letter-spacing: 3px;
+  font-size: 3em;
+  color: black;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 2px;
+  font-size: 1.5em;
+  color: black;
+}
+
+p {
+  font-family: 'Heebo', sans-serif;
+  line-height: 170%;
+  padding-bottom: 4%;
+  padding-top: 4%;
+}
+
+body {
+  font-family: 'Heebo', sans-serif;
+  background-color: #FFFFFF;
+}
+
+.header img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 60%;
+  filter: none;
+}
+
+/* Start Nav*/
+nav {
+  padding: 2%;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav ul li {
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+nav a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+/* End Nav*/
+
+/* Stroke */
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+nav ul li a:hover {
+  color: black;
+}
+
+nav.stroke ul li a {
+  position: relative;
+}
+nav.stroke ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+}
+
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+/* End Stroke*/
+
+figure a {
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-decoration: overline;
+  color: black;
+  padding-top: 5%;
+}
+
+/* Start Grids */
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.image-grid-article {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 5%;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+.image-grid-article p {
+  padding: 4%;
+}
+
+.image-grid-contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 5%;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+figure {
+  width: 100%;
+}
+
+img {
+  max-width: 90%;
+  padding: 2%;
+  padding-bottom: 0%;
+  filter: blur(2px);
+}
+
+img:hover {
+  filter: none;
+}
+
+.image-grid-article img {
+  filter: none;
+}
+
+.socialmedia img {
+  filter: none;
+}
+
+.image-grid-contact img {
+  filter: grayscale(100%);
+  transition: .3s ease-in-out;
+}
+
+.image-grid-contact:hover img {
+  filter: grayscale(0);
+}
+/* End grids */
+
+.text-content {
+  margin: 1%;
+  padding: 1%;
+}
+
+.text-content article{
+  padding: 2%;
+}
+
+.container {
+  max-width: 90%;
+  margin: auto;
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+
+.col {
+  background-color: black;
+  padding: 2%;
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+}
+
+.main {
+  flex: 2;
+}
+
+/* Start contact form*/
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: black;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: grey;
+}
+
+.contact-container {
+  background-color: #CACFD2;
+  padding: 5%;
+  margin-bottom: 4%;
+  margin-top: 2%;
+}
+
+/* End contact form*/
+
+#container {
+  padding: 2%;
+  width: 85%;
+  margin: auto;
+  max-width: 1500px;
+}
+
+button {
+  background-color: black;
+  border-radius: 5px;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Start Sticky Footer*/
+.site {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.site-content {
+  flex-grow: 1;
+}
+/* End Sticky Footer*/
+
+footer {
+  background-color: black;
+  color: white;
+  height: 3%;
+  text-align: center;
+  padding: 3% 0 6% 0;
+}
+
+footer img {
+  width: 5%;
+  padding: 1%;
+}
+
+/* Media Queries*/
+
+@media (min-width: 500px) {
+  figure {
+    width: 50%;
+    text-align: center;
+  }
+}
+
+@media (min-width: 800px) {
+  figure {
+    width: 33.3333%;
+    text-align: center;
+  }
+
+  .text-content {
+    display: flex;
+  }
+}
+
+@media (min-width: 1200px) {
+  figure {
+    width: 25%;
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 550px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    text-align: center;
+  }
+}
